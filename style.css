@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Nunito:wght@200;400;700&family=Ubuntu:wght@400;700&display=swap');
 
 :root {
-  --primaryColor: #F2E0C9;
-  --navColor1: #025959;
-  --navColor2: #A60C94;
-  --navColor3: #04ADBF;
-  --navColor4: #A0A603;
-  --navColor5: #04BFBF;
+  --primaryColor: #f2f2f2;
+  --navColor1: #4e734d;
+  --navColor2: #395950;
+  --navColor3: #469ca6;
+  --navColor4: #2f6673;
+  --navColor5: #1b3945;
 }
 
 html {
@@ -48,6 +48,9 @@ body {
   transform: translatex(-100vw);
 }
 
+
+
+
 nav,
 nav ul {
   height: 100vh;
@@ -88,6 +91,9 @@ nav li a:hover {
 
 nav li:nth-of-type(1) {
   background-color: var(--navColor1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   ;
 }
 
@@ -221,32 +227,74 @@ section {
   scroll-snap-align: center;
 }
 
-section#home {
-  background-image: url("https://images.unsplash.com/photo-1558256708-bc39e034b935?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80");
-  background-size: cover;
-  background-position: center center;
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-section#home h4 {
+.container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.container p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+
+section#home {
+  background-image: url("./assets/images/tasman-laser-logo-01.png");
+  background-color: var(--navColor2);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+section#home figure {
   position: absolute;
   z-index: 2;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 1.25rem;
+  left: 1.25rem;
   text-decoration: none;
   font-size: 1.25rem;
-  padding: .25rem .5rem;
+  padding: .25rem 1.5rem;
   color: var(--primaryColor);
-  background-color: var(--navColor3);
+  background-color: var(--navColor2);
   opacity: 0.75;
   border: 1px solid var(--primaryColor);
 }
+
+
 
 section#about {
   background-color: var(--navColor2);
 }
 
-section#skills {
+
+section#services {
   background-color: var(--navColor3);
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+}
+
+.service-list li {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.service-list li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--navColor3);
 }
 
 section#projects {
@@ -255,6 +303,46 @@ section#projects {
 
 section#contact {
   background-color: var(--navColor5);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-content--wrapper {
+  width: 80%;
+  max-width: 1600px;
+  height: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  flex: 1;
+  text-align: center;
+}
+
+.info-item p {
+  font-size: 1.25rem;
+}
+
+.map-container {
+  flex: 1;
+  width: 100%;
+  height: 450px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
 }
 
 /* Media Query: Large Smartphone (Vertical) */
@@ -267,5 +355,13 @@ section#contact {
   .menu-bars {
     top: 0.5rem;
     right: 1rem;
+  }
+
+  .brand {
+    width: 75%;
+  }
+
+  .contact-content--wrapper {
+    flex-direction: column;
   }
 }
