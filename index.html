@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>pds2023</title>
+  <title>Tasman Laser</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,9 +14,11 @@
     <!-- menu items -->
     <nav>
       <ul>
-        <li id="nav-1" class="slide-out-1"><a href="#home">home</a></li>
+        <li id="nav-1" class="slide-out-1">
+          <image class="brand" src="./assets/images/tasman-laser-logo-text.png" alt="Tasman Laser Logo" class="logo" />
+        </li>
         <li id="nav-2" class="slide-out-2"><a href="#about">about</a></li>
-        <li id="nav-3" class="slide-out-3"><a href="#skills">skills</a></li>
+        <li id="nav-3" class="slide-out-3"><a href="#services">services</a></li>
         <li id="nav-4" class="slide-out-4"><a href="#projects">projects</a></li>
         <li id="nav-5" class="slide-out-5"><a href="#contact">contact</a></li>
       </ul>
@@ -30,19 +32,53 @@
   </div>
   <!-- Sections -->
   <section id="home">
-    <h4>phillip david shields</h4>
+    <!-- just a nice big logo here via background image -->
   </section>
   <section id="about">
-    <h1>About Me</h1>
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Founded in 2022, Tasman Laser has been providing top-notch laser engraving and cutting services to businesses
+        and individuals alike. Our mission is to deliver exceptional quality and customer satisfaction with every
+        project we undertake.</p>
+      <p>We value precision, creativity, and attention to detail in everything we do.</p>
+    </div>
   </section>
-  <section id="skills">
-    <h1>Strengths</h1>
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <ul class="service-list">
+        <li>Custom Laser Engraving</li>
+        <li>Precision Laser Cutting</li>
+        <li>Material Sourcing and Consultation</li>
+        <li>Rapid Prototyping</li>
+      </ul>
+    </div>
   </section>
   <section id="projects">
-    <h1>Projects</h1>
+    <div class="container">
+      <h2>display some work here? maybe a nice photo grid or links to specific projects? not sure ...</h2>
+    </div>
   </section>
   <section id="contact">
-    <h1>Find Me</h1>
+    <h2>Contact Us</h2>
+    <div class="contact-content--wrapper">
+      <div class="contact-info">
+        <div class="info-item">
+          <p>123 Main Street<br>City, State 12345</p>
+        </div>
+        <div class="info-item">
+          <p>(123) 456-7890</p>
+        </div>
+        <div class="info-item">
+          <p>info@tasmanlaser.com</p>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50068.12345678901!2d173.01234567890123!3d-41.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d3b1234567890ab%3A0xcdef1234567890ab!2sMotueka%2C%20New%20Zealand!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
   </section>
   <!-- Script -->
   <script src="script.js"></script>
