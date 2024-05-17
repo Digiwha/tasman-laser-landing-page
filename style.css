@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Nunito:wght@200;400;700&family=Ubuntu:wght@400;700&display=swap');
 
 :root {
-  --primaryColor: #f2f2f2;
-  --navColor1: #4e734d;
-  --navColor2: #395950;
-  --navColor3: #469ca6;
-  --navColor4: #2f6673;
-  --navColor5: #1b3945;
+  --primaryColor: #000000;
+  --primaryTextColor: #ebebeb;
+  --navColor1: #FF7F00;
+  --navColor2: #D5521C;
+  --navColor3: #B84700;
+  --navColor4: #8C3400;
+  --navColor5: #662900;
 }
 
 html {
@@ -17,10 +18,7 @@ html {
 
 body {
   margin: 0;
-  background: #000;
   font-family: Nunito, sans-serif;
-
-
 }
 
 /* --- Navigation Menu ------------------------------ */
@@ -73,10 +71,11 @@ nav ul li {
 nav li a {
   position: relative;
   top: 25%;
-  color: #fff;
+  color: var(--primaryColor);
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: none;
+  font-size: 1.5rem;
   display: block;
   text-align: center;
   padding: 2rem 0;
@@ -88,9 +87,13 @@ nav li a:hover {
   font-weight: bold;
 }
 
+.brand {
+  height: 90%;
+}
+
 
 nav li:nth-of-type(1) {
-  background-color: var(--navColor1);
+  background-color: var(--primaryColor);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,7 +101,7 @@ nav li:nth-of-type(1) {
 }
 
 nav li:nth-of-type(2) {
-  background-color: var(--navColor2);
+  background-color: var(--navColor1);
 }
 
 nav li:nth-of-type(3) {
@@ -192,7 +195,7 @@ nav li:nth-of-type(5) {
 .bar3 {
   width: 35px;
   height: 2px;
-  background-color: #fff;
+  background-color: var(--primaryTextColor);
   margin: 8px 0;
   transition: 0.4s;
 }
@@ -246,31 +249,16 @@ section {
 
 
 section#home {
-  background-image: url("./assets/images/tasman-laser-logo-01.png");
-  background-color: var(--navColor2);
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-color: var(--primaryColor);
 }
 
-section#home figure {
-  position: absolute;
-  z-index: 2;
-  top: 1.25rem;
-  left: 1.25rem;
-  text-decoration: none;
-  font-size: 1.25rem;
-  padding: .25rem 1.5rem;
-  color: var(--primaryColor);
-  background-color: var(--navColor2);
-  opacity: 0.75;
-  border: 1px solid var(--primaryColor);
+section#home video {
+  border-radius: 5px;
+  overflow: hidden;
 }
-
-
 
 section#about {
-  background-color: var(--navColor2);
+  background-color: var(--navColor1);
 }
 
 
@@ -299,12 +287,14 @@ section#services {
 
 section#projects {
   background-color: var(--navColor4);
+  color: var(--primaryTextColor);
 }
 
 section#contact {
   background-color: var(--navColor5);
   display: flex;
   flex-direction: column;
+  color: var(--primaryTextColor);
 }
 
 .contact-content--wrapper {
@@ -355,10 +345,6 @@ section#contact {
   .menu-bars {
     top: 0.5rem;
     right: 1rem;
-  }
-
-  .brand {
-    width: 75%;
   }
 
   .contact-content--wrapper {
