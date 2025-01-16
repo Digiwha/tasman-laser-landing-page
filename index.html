@@ -4,86 +4,219 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tasman Laser</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Tasman Laser | Precision Laser Engraving Services</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --amber: #FFA000;
+      --dark-grey: #222222;
+      --light-grey: #333333;
+    }
+
+    body {
+      background-color: var(--dark-grey);
+      color: whitesmoke;
+    }
+
+    .navbar-brand {
+      color: var(--amber) !important;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      color: whitesmoke !important;
+    }
+
+    .nav-link:hover {
+      color: var(--amber) !important;
+    }
+
+    .hero {
+      background-color: var(--light-grey);
+      padding: 0px 24px;
+    }
+
+    .btn-amber {
+      background-color: var(--amber);
+      color: var(--dark-grey);
+      border: none;
+      padding: 10px 30px;
+      font-weight: 600;
+    }
+
+    .btn-amber:hover {
+      background-color: #FF8F00;
+      color: var(--dark-grey);
+    }
+
+    .service-card {
+      background-color: var(--light-grey);
+      border: none;
+      transition: transform 0.2s;
+      color: whitesmoke;
+    }
+
+    .service-card:hover {
+      transform: scale(1.02)
+    }
+
+    .service-card .card-title {
+      color: var(--amber);
+    }
+
+    .coming-soon {
+      background-color: var(--amber);
+    }
+
+    .update-text {
+      background-color: whitesmoke;
+    }
+
+    .contact-section {
+      background-color: var(--light-grey);
+    }
+
+  </style>
 </head>
 
 <body>
-  <!-- menu overlay -->
-  <div class="overlay overlay-slide-left" id="overlay">
-    <!-- menu items -->
-    <nav>
-      <ul>
-        <li id="nav-1" class="slide-out-1">
-          <image class="brand" src="./assets/images/tasman-laser-logo-02.png" alt="Tasman Laser Logo" class="logo" />
-        </li>
-        <li id="nav-2" class="slide-out-2"><a href="#about">about</a></li>
-        <li id="nav-3" class="slide-out-3"><a href="#services">services</a></li>
-        <li id="nav-4" class="slide-out-4"><a href="#projects">projects</a></li>
-        <li id="nav-5" class="slide-out-5"><a href="#contact">contact</a></li>
-      </ul>
-    </nav>
-  </div>
-  <!-- menu bars -->
-  <div class="menu-bars" id="menu-bars">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-  </div>
-  <!-- Sections -->
-  <section id="home">
-    <video autoplay muted>
-      <source src="./assets/video/tasman-laser-hero.mp4" type="video/mp4">
-    </video>
-  </section>
-  <section id="about">
+  <!-- Navigation -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <h2>About Us</h2>
-      <p>Founded in 2022, Tasman Laser has been providing top-notch laser engraving and cutting services to businesses
-        and individuals alike. Our mission is to deliver exceptional quality and customer satisfaction with every
-        project we undertake.</p>
-      <p>We value precision, creativity, and attention to detail in everything we do.</p>
-    </div>
-  </section>
-  <section id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <ul class="service-list">
-        <li>Custom Laser Engraving</li>
-        <li>Precision Laser Cutting</li>
-        <li>Material Sourcing and Consultation</li>
-        <li>Rapid Prototyping</li>
-      </ul>
-    </div>
-  </section>
-  <section id="projects">
-    <div class="container">
-      <h2>display some work here? maybe a nice photo grid or links to specific projects? not sure ...</h2>
-    </div>
-  </section>
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-content--wrapper">
-      <div class="contact-info">
-        <div class="info-item">
-          <p>123 Main Street<br>City, State 12345</p>
-        </div>
-        <div class="info-item">
-          <p>(123) 456-7890</p>
-        </div>
-        <div class="info-item">
-          <p>info@tasmanlaser.com</p>
-        </div>
+      <a class="navbar-brand" href="#">TASMAN LASER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#works">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50068.12345678901!2d173.01234567890123!3d-41.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d3b1234567890ab%3A0xcdef1234567890ab!2sMotueka%2C%20New%20Zealand!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus"
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="heroSection" class="hero">
+    <div class="mb-4 rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-1 fw-bold mb-4">Cutting and Engraving</h1>
+        <p class="fs-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptate est, expedita itaque nostrum, in cupiditate modi ratione hic repellat, voluptas unde. Quia, adipisci aliquid.</p>
+        <button class="btn btn-amber btn-lg" type="button">Get in touch for a quote</button>
       </div>
     </div>
   </section>
-  <!-- Script -->
-  <script src="script.js"></script>
+ 
+
+  <!-- Services Section -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" style="color: var(--amber)">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <div class="card-body --bs-body-color">
+              <h5 class="card-title">Custom Engraving</h5>
+              <p class="card-text">Personalize your products with precise and detailed laser engraving.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Metal Marking</h5>
+              <p class="card-text">Professional metal marking for industrial and commercial applications.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Cutting Services</h5>
+              <p class="card-text">Precise laser cutting for various materials and applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works Section -->
+  <section id="works" class="py-5" style="background-color: var(--light-grey)">
+    <div class="container">
+      <h2 class="text-center mb-5" style="color: var(--amber)">Recent Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <img src="https://placehold.co/600x400" class="card-img-top" alt="Custom Signage Project">
+            <div class="card-body">
+              <h5 class="card-title">Custom Business Signage</h5>
+              <p class="card-text">Precision-cut metal signage with illuminated elements for a local business.</p>
+            </div>  
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <img src="https://placehold.co/600x400" class="card-img-top" alt="Industrial Marking">
+            <div class="card-body">
+              <h5 class="card-title">Industrial Part Marking</h5>
+              <p class="card-text">High-precision serial number and QR code marking for manufacturing components.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <img src="https://placehold.co/600x400" class="card-img-top" alt="Decorative Panel">
+            <div class="card-body">
+              <h5 class="card-title">Decorative Panel Series</h5>
+              <p class="card-text">Custom-designed decorative panels for an office interior featuring intricate
+                patterns.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-black mt-5 coming-soon rounded p-4">
+        <p class="display-2">More exciting projects coming soon!</p>
+        <div class="update-text px-2 py-5 rounded-2">
+          <h3 class="text-secondary">We're busy adding content for our portfolio with some neat new projects.</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" style="color: var(--amber)">Contact Us</h2>
+      <div class="row justify-content-center text-center pb-5">
+        <div class="col-md-6">
+          <p class="lead mb-4">Ready to start your project? Want a quote? Get in touch with us today.</p>
+          <a href="mailto:info@tasmanlaser.com" class="btn btn-amber btn-lg">
+            Email Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5">
+    <div class="container text-center">
+      <p>&copy; 2025 Tasman Laser. All rights reserved.</p>
+      <span>built with <img src="./assets/images/heart.svg" alt="love" class="heart-svg"> by <a href="https://phillip.digiwha.co.nz/" target="_blank" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Digiwha Studios</a></span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
